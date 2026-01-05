@@ -55,11 +55,11 @@ fun main() = singleWindowApplication {
 @Composable
 private fun XYGraphScope<String, Float>.x() {
     VerticalBarPlot {
-        item("Initial Cash", 0f, 100f) { DefaultVerticalBar(SolidColor(Color.DarkGray)) }
-        item("Q1", 100f, 120f) { DefaultVerticalBar(SolidColor(Color(0xFF00498F))) }
-        item("Q2", 120f, 90f) { DefaultVerticalBar(SolidColor(Color(0xFFED7D31))) }
-        item("Q3", 90f, 110f) { DefaultVerticalBar(SolidColor(Color(0xFF00498F))) }
-        item("Q4", 110f, 130f) { DefaultVerticalBar(SolidColor(Color(0xFF00498F))) }
-        item("Final Cash", 0f, 130f) { DefaultVerticalBar(SolidColor(Color.DarkGray)) }
+        item("Initial Cash", 0f, 100f) { _, _, _ -> DefaultBar(SolidColor(Color.DarkGray)) }
+        item("Q1", 100f, 120f) { _, _, _ -> DefaultBar(SolidColor(Color(0xFF00498F))) }
+        item("Q2", 120f, 90f) { _, _, _ -> DefaultBar(SolidColor(Color(0xFFED7D31))) }
+        item("Q3", 90f, 110f) { _, _, _ -> DefaultBar(SolidColor(Color(0xFF00498F))) }
+        item("Q4", 110f, 130f) { _, _, _ -> DefaultBar(SolidColor(Color(0xFF00498F))) }
+        item("Final Cash", 0f, 130f) { _, _, _ -> DefaultBar(SolidColor(Color.DarkGray)) }
     }
 }
